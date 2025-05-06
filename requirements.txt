@@ -1,0 +1,6 @@
+langchain
+langchain_community
+sqlalchemy
+psycopg2
+streamlit
+langchain_groq
