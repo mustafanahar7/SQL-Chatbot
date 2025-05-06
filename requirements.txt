@@ -3,4 +3,5 @@ langchain_community
 sqlalchemy
 psycopg2
 streamlit
+psycopg2-binary
 langchain_groq
