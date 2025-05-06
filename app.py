@@ -116,3 +116,14 @@ if db is not None:
                 response = agent.run(user_query)
                 st.session_state.messages.append({"role":"assistant","content":response})
                 st.write(response)
+                
+    # Add Close Connection button to close the database connection
+    if st.sidebar.button("Close Connection"):
+        if db:
+            # Close the database connection if it exists
+            st.session_state.pop("db", None)  # Remove from session state
+            st.sidebar.success("Connection Closed Successfully")
+            db = None  # Clear the db object
+
+else:
+    st.info("Please connect to a database first.")
